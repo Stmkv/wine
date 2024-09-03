@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 def get_format_year(year: int) -> str:
     last_num = int(str(year)[-1])
     if 11 <= year <= 2:
@@ -8,3 +11,8 @@ def get_format_year(year: int) -> str:
         return f"года"
     else:
         return f"лет"
+
+
+def read_exel_file(file):
+    excel_file = pd.read_excel(file, usecols=['Название', 'Сорт', 'Цена', 'Картинка'])
+    return excel_file
