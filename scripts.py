@@ -1,4 +1,7 @@
 import pandas as pd
+import pprint
+
+from collections import defaultdict
 
 
 def get_format_year(year: int) -> str:
@@ -14,5 +17,13 @@ def get_format_year(year: int) -> str:
 
 
 def read_exel_file(file):
-    excel_file = pd.read_excel(file, usecols=['Название', 'Сорт', 'Цена', 'Картинка'])
+    excel_file = pd.read_excel(file, usecols=['Категория','Название', 'Сорт', 'Цена', 'Картинка', 'Акция'],keep_default_na=False)
     return excel_file
+
+def get_dict_with_alcohol(file):
+    alcohols = defaultdict(list)
+
+    for wine in file:
+        category = wine['Категория']
+        alcohols[category].append(wine)
+    return dict(alcohols)
