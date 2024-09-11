@@ -25,10 +25,10 @@ def read_exel_file(file):
     return excel_file
 
 
-def get_dict_with_alcohol(alcohols):
+def get_dict_with_alcohol(wines):
     alcohols = defaultdict(list)
 
-    for wine in alcohols:
+    for wine in wines:
         category = wine["Категория"]
         alcohols[category].append(wine)
     return dict(alcohols)

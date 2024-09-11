@@ -1,5 +1,6 @@
 import datetime
 import os
+import pathlib
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 from dotenv import load_dotenv
@@ -17,7 +18,7 @@ if __name__ == "__main__":
     template = env.get_template("template.html")
     years_company = datetime.datetime.now().year - 1920
     try:
-        wines = read_exel_file(xsl_filepath).to_dict(orient="records")
+        wines = read_exel_file(pathlib.Path(xsl_filepath)).to_dict(orient="records")
     except FileNotFoundError:
         print(f"Файл: {xsl_filepath} не найден")
         exit()

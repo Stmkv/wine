@@ -11,7 +11,7 @@
 
   Пример заполненной строки в файле .env:
 
-  `XSL_FILEPATH='../wine.xlsx'`
+  `XSL_FILEPATH='wine.xlsx'`
 
 ## Как запустить
 
