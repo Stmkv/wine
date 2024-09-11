@@ -17,7 +17,13 @@ def get_format_year(year: int) -> str:
 
 
 def read_exel_file(file):
-    excel_file = pd.read_excel(file, usecols=['Категория','Название', 'Сорт', 'Цена', 'Картинка', 'Акция'],keep_default_na=False)
+    excel_file = pd.read_excel(file, usecols=['Категория',
+                                              'Название',
+                                              'Сорт',
+                                              'Цена',
+                                              'Картинка',
+                                              'Акция'],
+                               keep_default_na=False)
     return excel_file
 
 def get_dict_with_alcohol(file):
