@@ -238,10 +238,6 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,python,venv,virtualenv
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
-
-wine.xlsx
-wine2.xlsx
-wine3.xlsx
 .idea
 __pycache__
 index.html
