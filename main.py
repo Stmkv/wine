@@ -6,7 +6,7 @@ from http.server import HTTPServer, SimpleHTTPRequestHandler
 from dotenv import load_dotenv
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
-from scripts import get_dict_with_alcohol, get_format_year, read_exel_file
+from functions_for_script import get_dict_with_alcohol, get_format_year, read_exel_file
 
 if __name__ == "__main__":
     load_dotenv()
